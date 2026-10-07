@@ -1,0 +1,1161 @@
+/* ============================================================
+   MEROASHA - DOCTOR DASHBOARD
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+.doctor-dashboard {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #172b4d;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.doctor-header {
+  min-height: 76px;
+  background: #0b5ed7;
+  color: #ffffff;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0b5ed7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.doctor-brand h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.doctor-brand span {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  opacity: 0.88;
+}
+
+.doctor-user {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.doctor-user-info {
+  text-align: right;
+}
+
+.doctor-user-info strong {
+  display: block;
+  font-size: 14px;
+}
+
+.doctor-user-info span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.logout-btn {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: transparent;
+  color: #ffffff;
+  padding: 9px 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #ffffff;
+  color: #0b5ed7;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.doctor-main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.doctor-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.doctor-page-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+.doctor-page-header p {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.refresh-btn {
+  border: 1px solid #d6e2f0;
+  background: #ffffff;
+  color: #0b5ed7;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background: #eaf2ff;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   ALERTS
+   ============================================================ */
+
+.alert {
+  padding: 13px 16px;
+  border-radius: 9px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alert-error {
+  background: #fff0f0;
+  border: 1px solid #ffd0d0;
+  color: #b42318;
+}
+
+.alert-success {
+  background: #ecfdf3;
+  border: 1px solid #b7ebc6;
+  color: #18733a;
+}
+
+
+/* ============================================================
+   STAT CARDS
+   ============================================================ */
+
+.doctor-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.stat-card span {
+  display: block;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 27px;
+  color: #172b4d;
+}
+
+
+/* ============================================================
+   APPOINTMENTS SECTION
+   ============================================================ */
+
+.appointments-section {
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 3px 12px rgba(16, 24, 40, 0.05);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #172b4d;
+}
+
+.section-header p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.appointment-count {
+  background: #eef5ff;
+  color: #0b5ed7;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   APPOINTMENT LIST
+   ============================================================ */
+
+.appointment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appointment-card {
+  display: grid;
+  grid-template-columns:
+    130px
+    minmax(180px, 1.1fr)
+    minmax(220px, 1.4fr)
+    130px
+    180px;
+
+  align-items: center;
+  gap: 18px;
+
+  padding: 18px;
+
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.appointment-card:hover {
+  border-color: #b9d2f5;
+  box-shadow: 0 4px 15px rgba(16, 24, 40, 0.07);
+}
+
+.appointment-selected {
+  border-color: #0b5ed7;
+  background: #f8fbff;
+}
+
+
+/* ============================================================
+   APPOINTMENT TIME
+   ============================================================ */
+
+.appointment-time {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time-label {
+  color: #98a2b3;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.appointment-time strong {
+  font-size: 17px;
+  color: #172b4d;
+}
+
+.appointment-time small {
+  color: #667085;
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   PATIENT
+   ============================================================ */
+
+.appointment-patient {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.patient-avatar {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+
+  border-radius: 50%;
+
+  background: #e7f0ff;
+  color: #0b5ed7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.appointment-patient h3 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 15px;
+  font-weight: 650;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appointment-patient p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   APPOINTMENT DETAILS
+   ============================================================ */
+
+.appointment-details {
+  min-width: 0;
+}
+
+.appointment-details p {
+  margin: 4px 0;
+  color: #667085;
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appointment-details strong {
+  color: #344054;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.appointment-status {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 82px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+}
+
+.status-booked {
+  background: #eef4ff;
+  color: #175cd3;
+}
+
+.status-confirmed {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.status-checked-in {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+.status-consultation {
+  background: #f4f3ff;
+  color: #6941c6;
+}
+
+.status-completed {
+  background: #ecfdf3;
+  color: #18733a;
+}
+
+.status-cancelled {
+  background: #fff0f0;
+  color: #b42318;
+}
+
+.status-no-show {
+  background: #f2f4f7;
+  color: #475467;
+}
+
+
+/* ============================================================
+   APPOINTMENT ACTION
+   ============================================================ */
+
+.appointment-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.consultation-btn,
+.view-btn,
+.disabled-btn {
+  border: none;
+  min-width: 160px;
+
+  padding: 11px 15px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.consultation-btn {
+  background: #0b5ed7;
+  color: #ffffff;
+}
+
+.consultation-btn:hover {
+  background: #084db2;
+  transform: translateY(-1px);
+}
+
+.view-btn {
+  background: #eaf2ff;
+  color: #0b5ed7;
+}
+
+.view-btn:hover {
+  background: #dbeaff;
+}
+
+.disabled-btn {
+  background: #f2f4f7;
+  color: #98a2b3;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.loading-box {
+  padding: 70px 20px;
+  text-align: center;
+  color: #667085;
+}
+
+.loader {
+  width: 32px;
+  height: 32px;
+
+  margin: 0 auto 12px;
+
+  border: 3px solid #e5eaf0;
+  border-top-color: #0b5ed7;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.empty-box {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #eef5ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+}
+
+.empty-box h3 {
+  margin: 0;
+  font-size: 17px;
+  color: #344054;
+}
+
+.empty-box p {
+  margin: 7px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   CONSULTATION WORKSPACE
+   ============================================================ */
+
+.consultation-workspace {
+  margin-bottom: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e4f0;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 18px rgba(16, 24, 40, 0.06);
+}
+
+
+/* ============================================================
+   WORKSPACE HEADER
+   ============================================================ */
+
+.workspace-header {
+  background: #f8fbff;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #e5eaf0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.workspace-header h2 {
+  margin: 0;
+
+  font-size: 20px;
+  color: #172b4d;
+}
+
+.workspace-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+  color: #667085;
+}
+
+.close-workspace-btn {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+
+  padding: 9px 15px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.close-workspace-btn:hover {
+  background: #f9fafb;
+}
+
+
+/* ============================================================
+   PATIENT SUMMARY
+   ============================================================ */
+
+.patient-summary {
+  display: grid;
+  grid-template-columns:
+    repeat(5, minmax(120px, 1fr));
+
+  gap: 15px;
+
+  padding: 20px 24px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.patient-summary div {
+  min-width: 0;
+}
+
+.patient-summary span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+  font-weight: 650;
+}
+
+.patient-summary strong {
+  display: block;
+
+  color: #344054;
+
+  font-size: 13px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   WORKSPACE SECTION
+   ============================================================ */
+
+.workspace-section {
+  padding: 24px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.workspace-section-title {
+  margin-bottom: 18px;
+}
+
+.workspace-section-title h3 {
+  margin: 0;
+
+  font-size: 16px;
+
+  color: #172b4d;
+}
+
+
+/* ============================================================
+   FORM GRID
+   ============================================================ */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* ============================================================
+   FORM GROUP
+   ============================================================ */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-grid .form-group {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #344054;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d0d5dd;
+
+  background: #ffffff;
+
+  color: #172b4d;
+
+  border-radius: 8px;
+
+  padding: 10px 12px;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input {
+  height: 42px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #98a2b3;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0b5ed7;
+
+  box-shadow:
+    0 0 0 3px rgba(11, 94, 215, 0.1);
+}
+
+
+/* ============================================================
+   WORKSPACE LOADING
+   ============================================================ */
+
+.workspace-loading {
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #667085;
+
+  font-size: 14px;
+}
+
+
+/* ============================================================
+   WORKSPACE ACTIONS
+   ============================================================ */
+
+.workspace-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding: 20px 24px;
+
+  background: #f9fafb;
+}
+
+.save-consultation-btn,
+.complete-consultation-btn {
+  border: none;
+
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.save-consultation-btn {
+  background: #eaf2ff;
+
+  color: #0b5ed7;
+}
+
+.save-consultation-btn:hover {
+  background: #dbeaff;
+}
+
+.complete-consultation-btn {
+  background: #16803c;
+
+  color: #ffffff;
+}
+
+.complete-consultation-btn:hover {
+  background: #116b31;
+
+  transform: translateY(-1px);
+}
+
+.save-consultation-btn:disabled,
+.complete-consultation-btn:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* ============================================================
+   COMPLETED BANNER
+   ============================================================ */
+
+.completed-banner {
+  padding: 13px 20px;
+
+  background: #ecfdf3;
+
+  border-top: 1px solid #b7ebc6;
+
+  color: #18733a;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1200px) {
+
+  .doctor-main {
+    padding: 25px;
+  }
+
+  .doctor-stats {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .appointment-card {
+    grid-template-columns:
+      110px
+      1fr
+      1.2fr
+      110px;
+
+    gap: 15px;
+  }
+
+  .appointment-action {
+    grid-column: 1 / -1;
+
+    justify-content: flex-start;
+
+    padding-top: 5px;
+  }
+
+  .patient-summary {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .form-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+}
+
+
+/* ============================================================
+   RESPONSIVE - MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .doctor-header {
+    padding: 14px 18px;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .doctor-user {
+    gap: 8px;
+  }
+
+  .doctor-user-info {
+    display: none;
+  }
+
+  .doctor-main {
+    padding: 18px;
+  }
+
+  .doctor-page-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .doctor-page-header h2 {
+    font-size: 23px;
+  }
+
+  .refresh-btn {
+    width: 100%;
+  }
+
+  .doctor-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .appointments-section {
+    padding: 17px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .appointment-card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 17px;
+  }
+
+  .appointment-time,
+  .appointment-patient,
+  .appointment-details,
+  .appointment-status,
+  .appointment-action {
+    width: 100%;
+  }
+
+  .appointment-action {
+    justify-content: flex-start;
+  }
+
+  .consultation-btn,
+  .view-btn,
+  .disabled-btn {
+    width: 100%;
+  }
+
+  .consultation-workspace {
+    border-radius: 10px;
+  }
+
+  .workspace-header {
+    padding: 17px;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .close-workspace-btn {
+    width: 100%;
+  }
+
+  .patient-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    padding: 17px;
+  }
+
+  .workspace-section {
+    padding: 17px;
+  }
+
+  .form-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .workspace-actions {
+    padding: 17px;
+
+    flex-direction: column;
+  }
+
+  .save-consultation-btn,
+  .complete-consultation-btn {
+    width: 100%;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .doctor-header {
+    min-height: 68px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .doctor-brand h1 {
+    font-size: 19px;
+  }
+
+  .doctor-main {
+    padding: 14px;
+  }
+
+  .doctor-stats {
+    grid-template-columns:
+      1fr;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-card strong {
+    font-size: 24px;
+  }
+
+  .patient-summary {
+    grid-template-columns:
+      1fr;
+  }
+
+  .doctor-page-header h2 {
+    font-size: 21px;
+  }
+
+  .appointment-patient h3 {
+    font-size: 14px;
+  }
+
+  .appointment-details p {
+    white-space: normal;
+  }
+}

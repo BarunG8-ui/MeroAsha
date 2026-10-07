@@ -1,0 +1,836 @@
+.medical-record-page {
+  min-height: 100vh;
+  padding: 32px 28px 50px;
+  background: #f5f7fb;
+  color: #172033;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.medical-record-header {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.record-kicker {
+  margin-bottom: 7px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.medical-record-header h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.medical-record-header p {
+  margin: 8px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.record-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =========================================================
+   READ ONLY STATUS
+========================================================= */
+
+.record-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 14px;
+
+  border-radius: 999px;
+
+  background: #f8fafc;
+
+  border: 1px solid #cbd5e1;
+
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #64748b;
+}
+
+/* =========================================================
+   READ ONLY NOTICE
+========================================================= */
+
+.read-only-notice {
+  max-width: 1100px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 15px 17px;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+  border-radius: 11px;
+
+  color: #1e3a8a;
+}
+
+.notice-icon {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.read-only-notice strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 13px;
+}
+
+.read-only-notice p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CLINICAL ALERTS
+========================================================= */
+
+.clinical-alert-grid {
+  max-width: 1100px;
+
+  margin: 0 auto 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+.clinical-alert {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  background: #fff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 16px rgba(
+      15,
+      23,
+      42,
+      0.05
+    );
+}
+
+.clinical-alert .alert-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.clinical-alert span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: .8px;
+}
+
+.clinical-alert strong {
+  display: block;
+
+  color: #172033;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.allergy-alert {
+  border-left: 4px solid #dc2626;
+}
+
+.allergy-alert .alert-icon {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.condition-alert {
+  border-left: 4px solid #2563eb;
+}
+
+.condition-alert .alert-icon {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.blood-alert {
+  border-left: 4px solid #7c3aed;
+}
+
+.blood-alert .alert-icon {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.medical-record-card {
+  max-width: 1100px;
+
+  margin: 0 auto 22px;
+
+  padding: 26px;
+
+  background: #fff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 18px rgba(
+      15,
+      23,
+      42,
+      .045
+    );
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section-title {
+  margin-bottom: 22px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #eef0f4;
+}
+
+.section-kicker {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   PATIENT INFORMATION
+========================================================= */
+
+.patient-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 12px;
+}
+
+.info-item {
+  padding: 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+}
+
+.info-item span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .5px;
+}
+
+.info-item strong {
+  color: #172033;
+
+  font-size: 14px;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group > label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 750;
+}
+
+/* =========================================================
+   DISPLAY BOX
+========================================================= */
+
+.display-box {
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 10px 13px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 9px;
+
+  color: #334155;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+}
+
+.display-box.large {
+  min-height: 105px;
+
+  display: block;
+
+  line-height: 1.7;
+}
+
+.important-box {
+  background: #fffbeb;
+
+  border-color: #fde68a;
+
+  color: #78350f;
+}
+
+/* =========================================================
+   MEDICATIONS
+========================================================= */
+
+.medication-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.medication-display {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 14px 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+}
+
+.medicine-main {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.medicine-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+.medicine-main strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #172033;
+
+  font-size: 14px;
+}
+
+.medicine-main span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.medicine-frequency {
+  min-width: 140px;
+
+  text-align: right;
+}
+
+.medicine-frequency span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.medicine-frequency strong {
+  color: #334155;
+
+  font-size: 12px;
+}
+
+.empty-text {
+  margin: 0;
+
+  padding: 18px;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   RECORD METADATA
+========================================================= */
+
+.record-metadata {
+  max-width: 1100px;
+
+  margin: 0 auto 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  background: #fff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.record-metadata > div {
+  padding: 17px 20px;
+
+  border-right: 1px solid #e5e7eb;
+}
+
+.record-metadata > div:last-child {
+  border-right: none;
+}
+
+.record-metadata span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .7px;
+}
+
+.record-metadata strong {
+  color: #172033;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-card {
+  min-height: 260px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.loading-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+
+  border: 3px solid #dbeafe;
+
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation:
+    medicalRecordSpin
+    .8s linear infinite;
+}
+
+@keyframes medicalRecordSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-card {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.error-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  border-radius: 50%;
+
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.error-card h2 {
+  margin: 0 0 8px;
+
+  color: #172033;
+
+  font-size: 19px;
+}
+
+.error-card p {
+  margin: 0 0 20px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.primary-button {
+  min-height: 42px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+  .patient-info-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .medical-record-page {
+    padding: 25px 20px 45px;
+  }
+
+  .medical-record-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .clinical-alert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-info-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .record-metadata {
+    grid-template-columns: 1fr;
+  }
+
+  .record-metadata > div {
+    border-right: none;
+
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .record-metadata > div:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .medical-record-page {
+    padding: 18px 13px 35px;
+  }
+
+  .medical-record-header h1 {
+    font-size: 25px;
+  }
+
+  .record-header-actions {
+    width: 100%;
+  }
+
+  .patient-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medical-record-card {
+    padding: 18px;
+  }
+
+  .medication-display {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .medicine-frequency {
+    width: 100%;
+
+    min-width: 0;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #e5e7eb;
+
+    text-align: left;
+  }
+
+  .read-only-notice {
+    padding: 13px;
+  }
+}
